@@ -46,3 +46,27 @@ while (have_posts()) {
 </article>
 <?php } ?>
 ```
+
+### 4. Header & Footer
+
+- get_header()
+- get_footer()
+- Load CSS
+  - Create function.php
+    - add_action()
+    - wp_enqueue_style()
+    - get_stylesheet_uri()
+- Add WordPress header
+  - wp_head()
+  - wp_footer()
+
+### 5. Convert Static HTML Template into WordPress
+
+- Seperate **header** and **footer** section
+- get_theme_file_uri()
+- include cdn into function.php
+- include javascript into function.php
+
+### 6. Interior Page Template
+
+Pages - 001 - 7:19
