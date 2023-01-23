@@ -16,8 +16,11 @@ Need to know:
 | have_posts()  | Check how many posts we have |
 | the_permalink() | Get Permalink |
 | the_title() | Get Title |
+| get_the_title() | - |
 | the_content() | Get Content |
 | the_excerpt() | Get Content |
+| the_ID() | - |
+| get_the_id() | - |
 
 **NB. the_content() and the_excerpt() -> Get Content. They return the same result.**
 
@@ -69,4 +72,25 @@ while (have_posts()) {
 
 ### 6. Interior Page Template
 
-Pages - 001 - 7:19
+How to add page title tag?
+
+```php
+function function_name() {
+    add_theme_support('title-tag');
+}
+add_action('after_setup_theme', 'function_name');
+```
+
+Get current Post/Page ID
+
+```php
+get_the_ID()
+```
+
+Get current Post/Page parent ID
+
+```php
+wp_get_post_parent_id(get_the_ID())
+```
+
+05 - Pages- Nutshell (003: 00:00)
