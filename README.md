@@ -112,4 +112,43 @@ Need to know:
 | bloginfo('charset') | Character Set |
 | body_class() | Add some class into body tag |
 
-05 - Pages- Nutshell (003: 00:00)
+### 9. Navigation Menus
+
+1st, Register the custom menu into function.php file:
+
+```php
+function any_name_what_you_like() {
+    register_nav_menu('headerMenuLocation', 'Header Menu Location');
+    register_nav_menu('footerMenuLocationOne', 'Footer Menu Location One');
+    register_nav_menu('footerMenuLocationTwo', 'Footer Menu Location Two');
+}
+
+add_action('after_setup_theme', 'any_name_what_you_like');
+```
+
+2nd, Create menu associate with registered name.
+
+3rd, Put the PHP code to call the registered menu:
+
+```php
+wp_nav_menu([
+    'theme_location' => 'headerMenuLocation'
+]);
+
+wp_nav_menu([
+    'theme_location' => 'footerMenuLocationOne'
+]);
+
+wp_nav_menu([
+    'theme_location' => 'footerMenuLocationTwo'
+]);
+```
+
+Add menually. Need to know:
+
+| Function name | Description |
+| ------------- | ----------- |
+| is_page() | Return boolean |
+| wp_get_post_parent_id() | Return parent post ID |
+
+06-0001:00

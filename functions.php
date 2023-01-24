@@ -18,9 +18,14 @@ function university_files() {
 
 add_action('wp_enqueue_scripts', 'university_files');
 
-// Title
-
+// After setup theme: Hook
 function university_features() {
+    // Menu
+    register_nav_menu('headerMenuLocation', 'Header Menu Location');
+    register_nav_menu('footerMenuLocationOne', 'Footer Menu Location One');
+    register_nav_menu('footerMenuLocationTwo', 'Footer Menu Location Two');
+
+    // Title tag
     add_theme_support('title-tag');
 }
 
