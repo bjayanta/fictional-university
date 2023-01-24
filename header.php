@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
 <head>
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
     <!-- <h1>Greetings from header.php</h1> -->
 
     <header class="site-header">

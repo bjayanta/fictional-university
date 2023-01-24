@@ -102,4 +102,14 @@ Need to know:
 | get_the_ID()  | Return child pages array |
 | wp_list_pages() | Print child pages list |
 
+### 8. Meta Information Settings
+
+Need to know:
+
+| Function name | Description |
+| ------------- | ----------- |
+| language_attributes() | Language |
+| bloginfo('charset') | Character Set |
+| body_class() | Add some class into body tag |
+
 05 - Pages- Nutshell (003: 00:00)
