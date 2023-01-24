@@ -93,4 +93,13 @@ Get current Post/Page parent ID
 wp_get_post_parent_id(get_the_ID())
 ```
 
+### 7. Menu of child page link
+
+Need to know:
+
+| Function name | Description |
+| ------------- | ----------- |
+| get_the_ID()  | Return child pages array |
+| wp_list_pages() | Print child pages list |
+
 05 - Pages- Nutshell (003: 00:00)
