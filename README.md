@@ -21,6 +21,7 @@ Need to know:
 | the_excerpt() | Get Content |
 | the_ID() | - |
 | get_the_id() | - |
+| site_url() | - |
 
 **NB. the_content() and the_excerpt() -> Get Content. They return the same result.**
 
@@ -151,4 +152,25 @@ Add menually. Need to know:
 | is_page() | Return boolean |
 | wp_get_post_parent_id() | Return parent post ID |
 
-06-0001:00
+### 10. Paginate
+
+Add menually. Need to know:
+
+| Function name | Description |
+| ------------- | ----------- |
+| paginate_links() | Paginate |
+
+### 11. Archive
+
+Add menually. Need to know:
+
+| Function name | Description |
+| ------------- | ----------- |
+| is_catigory() | Return boolean value |
+| is_author() | Return boolean value |
+| the_archive_title() | Get archive title (Category, Authod, Day, Month, Year) |
+| the_archive_description() | Get category description |
+
+### 12. Custom Query
+
+06-0004:14:01
