@@ -173,4 +173,35 @@ Add menually. Need to know:
 
 ### 12. Custom Query
 
-06-0004:14:01
+Need to understand:
+
+| Function name | Description |
+| ------------- | ----------- |
+| new WP_Query() | For custom query |
+| wp_reset_postdata() | Must use if use WP_Query() |
+| the_time() | Return date time |
+| wp_trim_words() | Use to trim and how many words to display. |
+| get_the_content() | Get post description |
+| get_post_type() | Get post type |
+
+### 13. Custom Post Types
+
+```php
+function university_post_types() {
+    register_post_type('event', [
+        'public' => true,
+        'menu_icon' => 'dashicons-calendar',
+        'labels' => [
+            'name' => 'Events',
+            'all_items' => 'All Events',
+            'add_new_item' => 'Add New Event',
+            'edit_item' => 'Edit Event',
+            'singular_name' => 'Event'
+        ],
+    ]);
+}
+
+add_action('init', 'university_post_types');
+```
+
+07-001:00:00
