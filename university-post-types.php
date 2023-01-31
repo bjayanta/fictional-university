@@ -7,7 +7,6 @@ function university_post_types() {
 		],
 		'has_archive' => true,
         'public' => true,
-        'menu_icon' => 'dashicons-calendar',
         'labels' => [
             'name' => 'Events',
             'all_items' => 'All Events',
@@ -15,6 +14,7 @@ function university_post_types() {
             'edit_item' => 'Edit Event',
             'singular_name' => 'Event'
         ],
+        'menu_icon' => 'dashicons-calendar',
     ]);
 }
 

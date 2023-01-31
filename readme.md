@@ -17,3 +17,9 @@ function university_post_types() {
 
 add_action('init', 'university_post_types');
 ```
+
+Need to know:
+
+| Function name | Description |
+| ------------- | ----------- |
+| get_post_type_archive_link()  | Get custom post type archive link |
