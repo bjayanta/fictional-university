@@ -42,7 +42,7 @@
                 </div>
             </div>
 
-            <?php } wp_reset_postdata(); ?>
+            <?php } ?>
 
             <p class="t-center no-margin"><a href="<?php the_permalink(); ?>" class="btn btn--blue">View All Events</a></p>
         </div>
