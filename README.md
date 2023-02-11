@@ -173,4 +173,64 @@ Add menually. Need to know:
 
 ### 12. Custom Query
 
-06-0004:14:01
+Need to understand:
+
+| Function name | Description |
+| ------------- | ----------- |
+| new WP_Query() | For custom query |
+| wp_reset_postdata() | Must use if use WP_Query() |
+| the_time() | Return date time |
+| wp_trim_words() | Use to trim and how many words to display. |
+| get_the_content() | Get post description |
+| get_post_type() | Get post type |
+
+### 13. Custom Post Types
+
+```php
+function university_post_types() {
+    register_post_type('event', [
+        'public' => true,
+        'menu_icon' => 'dashicons-calendar',
+        'labels' => [
+            'name' => 'Events',
+            'all_items' => 'All Events',
+            'add_new_item' => 'Add New Event',
+            'edit_item' => 'Edit Event',
+            'singular_name' => 'Event'
+        ],
+    ]);
+}
+
+add_action('init', 'university_post_types');
+```
+
+### 14. Pagination
+
+```php
+function university_adjust_queries($query) {
+    if(!is_admin() && is_post_type_archive() && $query->is_main_query()) {
+        $today = date('Ymd');
+
+        // $query->set('posts_per_page', '1');
+        $query->set('meta_key', 'event_date');
+        $query->set('orderby', 'meta_value_num');
+        $query->set('order', 'ASC');
+        $query->set('meta_query', [
+            ['key' => 'event_date', 'compare' => '>=', 'value' => $today, 'type' => 'numeric'],
+        ]);
+    }
+    
+}
+
+add_action('pre_get_posts', 'university_adjust_queries');
+```
+
+Need to understand:
+
+| Function name | Description |
+| ------------- | ----------- |
+| paginate_links() | Pagination |
+| is_page() | Pagination |
+| paginate_links() | Pagination |
+
+08-001:00:00
